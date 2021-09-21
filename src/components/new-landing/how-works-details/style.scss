@@ -1,0 +1,57 @@
+@import './src/style/variables';
+
+.howWorksContainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    margin-bottom: 160px !important;
+    
+
+	.howWorksText{
+		font-size: 18px;
+		line-height: 1.7777;
+		letter-spacing: -0.3px;
+		//margin-right: 75px;
+		padding: 15px 0;
+		width: 50%;
+		padding-right: 35px;		
+		.header{
+			color: $hBlack;
+			font-size: 48px;
+            margin-bottom: 25px;
+            font-family: 'Krub', sans-serif;
+            font-weight: 300;
+        }
+        @media (max-width: 880px) {
+            margin-bottom: 60px;
+        }
+	}
+	.howWorksVideo{
+		width: 50%;
+		& > div {
+			width: 100%;
+		}
+	}
+	@media (max-width: 1200px) {
+        margin-bottom: 55px !important;
+		text-align: center;
+		justify-content: center;
+		
+		.howWorksText, .howWorksVideo{
+			width: 80%;
+		}
+		.howWorksText{
+			padding-right: 0;
+		}
+	}
+    @media (max-width: 880px) {
+		margin-bottom: 55px !important;
+		padding: 0 !important;
+		width: 100%;
+		text-align: center;
+		
+		.howWorksText, .howWorksVideo{
+			width: 100%;
+		}
+    }
+}

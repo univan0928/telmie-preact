@@ -1,0 +1,125 @@
+.photoCard {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 208px;
+    height: auto;
+    min-height: 208px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Krub', sans-serif;
+    font-weight: 400;
+    .proDetails{
+        position: relative;
+        z-index: 3;
+        font-size: 12px;
+        position: absolute;
+        width: 100%;
+        bottom: 25px;
+    }
+    .proName{
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        margin-bottom: 5px;
+    }
+    .proService{
+        position: relative;
+        z-index: 3;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: rgba($color: #ffffff, $alpha: .9);
+    }
+    .charge{
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        width: auto;
+        max-width: 110px;
+        height: 21px;
+        line-height: 21px;
+        padding: 0 10px;
+        border-radius: 12px;
+        background-color: rgba($color: white, $alpha: 0.3);
+        font-family: 'Krub', sans-serif;
+        font-weight: 600;
+    }
+    &:not(.statCard)::after{
+        display: block;
+        position: relative;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.64));
+        margin-top: -150px;
+        height: 150px;
+        width: 100%;
+        content: '';
+    }
+
+    @media (max-width: 880px) {
+        display: none;
+    }
+}
+
+.statCard{
+    background-color: #565fcf;
+    font-size: 18px;
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 20px;
+
+    .minWrapper{
+        position: relative;
+        width: 100%;
+        height: 48px;
+        overflow:hidden;
+    }
+    .minutes{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto; 
+        font-size: 32px;
+        width:auto;
+        white-space: nowrap;
+    }
+    .animateMinutes{
+        -webkit-animation: countNumber 1s;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-timing-function: steps(10);
+    }
+    .signature{
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+    }
+
+    @media (max-width: 880px) {
+        display: block;
+        //width: 100%;
+        width: 306px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+}
+
+.photoCardCol{
+    display: inline-block;
+
+    @media (max-width: 880px) {
+        margin-top: 24px !important;
+        margin-right: 0!important;
+        & br {
+            display: none;
+        }
+    }
+}
+
+@-webkit-keyframes countNumber {
+    0% {
+        margin-top: 0px
+    }
+    100% {
+        margin-top:-480px
+    }
+}

@@ -1,0 +1,80 @@
+@import './src/style/variables';
+
+.photoCardsWrapper{
+    margin: 0 20px;
+    @media (max-width: 880px) {
+        margin: 0;
+    }
+}
+.photoCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 28px 0 0 !important;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto !important;
+
+    .videoWrapper{
+        position: relative;
+        width: 306px;
+        min-width: 306px;
+        height: 530px;
+        overflow: hidden;
+
+        .callBtn{
+            position: absolute;
+            z-index: 2;
+            left: 24px;
+            bottom: 24px;
+        }
+        .settingsBtns{
+            position: absolute;
+            z-index: 2;
+            right: 24px;
+            bottom: 24px;
+        }
+    }
+    .videoContainer{
+        display: inline-block;
+        position: absolute;
+        background-color: $lightBackgroundGrey;
+        width: 942px;
+        height: 530px;
+        left: 50%;
+        margin: 0 auto;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .video{
+            text-align: center;
+            height: 100%;
+        }
+    }
+
+    & > div:not(:last-child){
+        margin-right: 10px;
+    }
+
+    @media (max-width: 1270px) {
+        & > div:last-child, & > div:first-child{
+            display: none;
+        }
+        & > div:not(:last-child){
+            margin-right: 15px;
+        }
+        justify-content: center;
+    }
+    @media (max-width: 880px) {
+        padding: 0 !important;
+        & > div{
+            width: 100%;
+
+            &.videoWrapper {
+                margin-right: 0;
+            }
+        }
+    }
+}

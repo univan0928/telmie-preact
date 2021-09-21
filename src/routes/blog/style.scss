@@ -1,0 +1,129 @@
+@import './src/style/variables';
+
+h3 {
+  color: $hBlack;
+  font-size: 22px;
+  font-family: 'Krub', sans-serif;
+  font-weight: 500;
+}
+
+.blogHeader {
+  .title {
+    color: $hBlack;
+    font-size: 48px;
+    font-family: 'Krub', sans-serif;
+    font-weight: 300;
+    max-width: 726px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  .date {
+    color: $coolGrey;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  @media (max-width: 880px) {
+    .title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.blogArticle {
+  padding: 60px 0;
+  position: relative;
+
+  > div {
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 120px;
+    height: 6px;
+    background: url(/../../assets/decor@3x.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+}
+
+.blogText {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 18px;
+  line-height: 1.778;
+  color: $charcoalGrey;
+  letter-spacing: -0.3px;
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: $cherryRedTwo;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &Main {
+    font-family: 'Krub', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 2;
+    color: $hBlack;
+    letter-spacing: -0.1px;
+  }
+}
+
+.blogDecoration {
+  position: relative;
+  margin-bottom: 6px;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 120px;
+    height: 6px;
+    background: url(/../../assets/decor@3x.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+}
+
+:global {
+  #blog {
+    min-height: 1000px;
+    padding-top: 70px;
+    @media (max-width: 880px) {
+      padding-top: 40px;
+    }
+
+    button.red-btn {
+      font-size: 14px;
+      height: 40px;
+    }
+  }
+}

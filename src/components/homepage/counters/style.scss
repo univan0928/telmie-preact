@@ -1,0 +1,80 @@
+@import './src/style/variables';
+.counters {
+    max-width: 980px;
+    margin: 0 auto;
+	text-align: left;
+    padding: 0;
+	> div {
+        position: relative;
+		display: inline-block;
+		color: $blue;
+		font-weight: 500;
+		font-size: 35px;
+		letter-spacing: -1px;
+        margin: 0 110px 0 0;
+        padding:  0 0  60px 30px;
+        line-height: 40px;
+        border-left: 2px solid $blue;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+
+		> span {
+			font-size: 110px;
+			letter-spacing: -4px;
+			color: $lightRed2;
+            line-height: 105px;
+			display: block;
+            font-weight: 900;
+		}
+        &:before {
+            font-family: 'icomoon' !important;
+            border: solid 2px $blue;
+            display: block;
+            position: relative;
+            font-size: 60px;
+            text-align: center;
+            width: 90px;
+            height: 90px;
+            line-height: 80px;
+            border-radius: 50% 50% 50% 0;
+            margin-bottom: -60px;
+            left: -32px;
+            top: -100px;
+        }
+        &:first-child:before {
+            content: "\e055";
+            font-size: 65px;
+            line-height: 90px;
+        }
+        &:nth-child(2):before {
+            content: "\e040";
+        }
+        &:last-child:before {
+            content: "\e015";
+        }
+        
+	}
+    @media (max-width: 880px) {
+        > div {
+            display: block;
+            width: 100%;
+            border-left: 0;
+            &:before {
+                display:inline-block;
+                position: static;
+                margin: 0;
+                margin-right: 40px;
+                position: relative;
+                left: 0;
+                top: -15px;
+            }
+            > span {
+            display: inline-block;
+        }
+        }
+    }
+}

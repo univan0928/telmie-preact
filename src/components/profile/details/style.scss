@@ -1,0 +1,47 @@
+@import './src/style/variables';
+.details {
+	h2 {
+		a {
+			float: right;
+			font-size: 16px;
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			top: 23px;
+			span {
+				margin-left: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+	.inner {
+		> div {
+			display: inline-block;
+			width: 50%;
+			margin-bottom: 10px;
+			.key {
+				width: 100px;
+				display: inline-block;
+                color: $blue;
+                text-align: right;
+                margin-right: 10px;
+			}
+			.value {
+				font-weight: 400;
+                font-size: 18px;
+                border-bottom: solid 1px $lightGrey;
+                display: inline-block;
+                min-width: 70%;
+			}
+		}
+	}
+}
+@media (max-width: 880px) {
+	.details {
+		.inner {
+			> div {
+				width: 100%;				
+			}
+		}
+	}
+}

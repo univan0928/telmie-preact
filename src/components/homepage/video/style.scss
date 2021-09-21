@@ -1,0 +1,78 @@
+@import './src/style/variables';
+@keyframes pulse {
+	25% {
+		transform: scale(1.05);
+	}
+
+	75% {
+		transform: scale(.95);
+	}
+}
+/*.videoContainer {
+	height: 515px;
+	background-color: $blue;
+}*/
+.playButton {
+	border-radius: 10px;
+    background: rgba(61, 82, 115, 0.35);
+    border: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	cursor: pointer;
+
+	svg{
+		transition: all .2s ease;
+		width: 150px;
+		height: 150px;
+		path{
+			fill: rgba(237, 232, 219, 0.6);
+		}
+	}
+	
+	&:hover{
+		svg{
+			transform: scale(1.1);
+		}
+	}
+	
+    /*> img {
+        }
+	> span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 140px;
+	}
+    &:hover > img {
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+	h2 {
+		color: white;
+		font-weight: bold;
+		position: absolute;
+		left: 40px;
+		top: 30px;
+		text-align: left;
+		font-size: 50px;
+        line-height: 55px;
+        font-weight: 500;
+        text-transform: none;
+		.subTitle {
+			display: block;
+			color: $lightRed2;
+		}
+	}*/
+}
+/*@media (max-width: 880px) {
+	.videoContainer {
+		height: 300px;
+	}
+}*/

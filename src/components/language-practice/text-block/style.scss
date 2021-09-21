@@ -1,0 +1,98 @@
+@import './src/style/variables';
+
+.TextBlock {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 160px auto;
+  align-items: center;
+
+  .howWorksText {
+    font-size: 18px;
+    line-height: 1.7778;
+    letter-spacing: -0.3px;
+    padding: 15px 0;
+    width: 51%;
+    padding-right: 20px;
+  }
+
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header {
+    color: $hBlack;
+    margin-bottom: 25px;
+    font: 300 40px/1.4 'Krub', sans-serif;
+    letter-spacing: .7px;
+  }
+
+  .text {
+    max-width: 530px;
+
+    [lang="ru"] & {
+      max-width: 535px;
+    }
+  }
+
+  &Right {
+    flex-direction: row-reverse;
+
+    .howWorksText{
+      text-align: right;
+      width: 40%;
+      padding-right: 0;
+      padding-left: 20px;
+
+      [lang="ru"] & {
+        width: 48%;
+      }
+    }
+
+    .text {
+      float: right;
+      max-width: 500px;
+
+      [lang="ru"] & {
+        max-width: 450px;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    margin: 0 auto 100px auto !important;
+    padding: 0;
+    //width: 80%;
+    max-width: none;
+    text-align: center;
+    flex-direction: column-reverse;
+
+    .header {
+      font-size: 32px;
+    }
+
+    .text {
+      max-width: none;
+      [lang="ru"] & {
+        max-width: none;
+      }
+    }
+
+    .howWorksText, .image {
+      width: 100% !important;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .image {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+}

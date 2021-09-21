@@ -1,0 +1,49 @@
+@import './src/style/variables';
+
+.contuctContainer{
+	background-color: rgb(245,246,248);
+	padding: 115px 32px 130px 32px;
+	text-align: center;
+
+	.header{
+		font-size: 48px;
+		line-height: 64px;
+		color: $hBlack;
+        margin-bottom: 16px;
+        font-family: 'Krub', sans-serif;
+        font-weight: 300;
+	}
+	.subHeader{
+		font-size: 18px;
+		line-height: 32px;
+		margin-bottom: 65px;
+	}
+	.contactForm{
+		max-width: 600px;
+		min-width: 256px;
+		margin: 0 auto;
+
+		.formControl{
+			margin-top: 30px;
+
+			button{
+				margin-top: 35px;
+			}
+			.errorMsg{
+				text-align: center;
+				color: $red;
+			}
+		}
+		
+	}
+    
+    @media (max-width: 880px) {
+        padding: 60px 32px 130px 32px;
+        .subHeader{
+            margin-bottom: 40px;
+        }
+	}
+	@media (max-width: 480px) {
+        
+    }
+}
